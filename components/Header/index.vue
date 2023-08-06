@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__logo">
       <img
-        src="/images/mangood_logo.png"
+        src="~assets/common/images/logo/mangood_logo.png"
         alt="mangood_logo"
         class="header__logo__icon"
       />

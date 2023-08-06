@@ -11,7 +11,7 @@
         <div class="socials__item">
           <a href="#">
             <img
-              src="/images/socials/icon_figma.png"
+              src="~assets/common/images/logo/socials/icon_figma.png"
               alt="figma"
               class="social__item__icon"
             />
@@ -20,7 +20,7 @@
         <div class="socials__item">
           <a href="#">
             <img
-              src="/images/socials/icon_instagram.png"
+              src="~assets/common/images/logo/socials/icon_instagram.png"
               alt="instagram"
               class="social__item__icon"
             />
@@ -29,7 +29,7 @@
         <div class="socials__item">
           <a href="#">
             <img
-              src="/images/socials/icon_threads.png"
+              src="~assets/common/images/logo/socials/icon_threads.png"
               alt="threads"
               class="social__item__icon"
             />
@@ -38,7 +38,7 @@
         <div class="socials__item">
           <a href="#">
             <img
-              src="/images/socials/icon_tiktok.png"
+              src="~assets/common/images/logo/socials/icon_tiktok.png"
               alt="tiktok"
               class="social__item__icon"
             />
