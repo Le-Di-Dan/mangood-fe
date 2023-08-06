@@ -2,13 +2,13 @@
   "name": "mangood-fe",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Le-Di-Dan.github.io",
+  "homepage": "https://Le-Di-Dan.github.io/mangood-fe/",
   "scripts": {
     "dev": "nuxt --open",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "yarn generate & gh-pages -d dist"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "core-js": "^3.25.3",
@@ -21,6 +21,7 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "push-dir": "^0.4.1"
   }
 }
