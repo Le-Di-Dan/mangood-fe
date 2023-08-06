@@ -2,8 +2,23 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import "./font";
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
 html {
   font-size: 10px !important;
+  font-family: "Mona Sans" !important;
+  width: 100vw;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 html,
 body,

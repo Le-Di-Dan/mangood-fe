@@ -1,0 +1,6 @@
+@mixin textConfig($fSize, $lHeight, $color, $fWeight) {
+  font-size: $fSize;
+  line-height: $lHeight;
+  color: $color;
+  font-weight: $fWeight;
+}
