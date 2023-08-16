@@ -10,20 +10,27 @@
       <form class="contact__form" action="#" @submit.prevent>
         <input
           placeholder="Your name"
-          v-model="name"
+          v-model="client_name"
           class="contact__form__name input"
         />
         <input
           placeholder="Email"
-          v-model="email"
+          v-model="client_email"
           class="contact__form__email input"
         />
         <textarea
+          v-model="content"
           maxlength="255"
           placeholder="Tell us little about the project..."
           class="contact__form__password input"
         />
-        <button class="contact__form__send pointer" type="submit">SEND</button>
+        <button
+          class="contact__form__send pointer"
+          type="submit"
+          @click="handleSendMail"
+        >
+          SEND
+        </button>
       </form>
     </div>
   </div>
@@ -33,10 +40,27 @@
 export default {
   data() {
     return {
-      name: "",
-      email: "",
+      client_name: "",
+      client_email: "",
       content: "",
     };
+  },
+  methods: {
+    async handleSendMail() {
+      try {
+        await this.$axios.post("/support-mail", {
+          client_name: this.client_name,
+          client_email: this.client_email,
+          content: this.content,
+        });
+        console.log("success");
+        this.client_email = "";
+        this.client_name = "";
+        this.content = "";
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
