@@ -14,7 +14,7 @@
           <a href="#partners" class="navbar__item__link">Partner</a>
         </li>
         <li class="navbar__item">
-          <a href="#mango" class="navbar__item__link">Why MANGOOD?</a>
+          <a href="#why-mangood" class="navbar__item__link">Why MANGOOD?</a>
         </li>
         <li class="navbar__item">
           <a href="#services" class="navbar__item__link">Services</a>
@@ -58,7 +58,7 @@ export default {
 .header {
   &__logo {
     width: 42.15rem;
-    padding-top: 0.8rem;
+    margin-top: -1.4rem;
     display: flex;
     justify-content: left;
     align-items: flex-start;

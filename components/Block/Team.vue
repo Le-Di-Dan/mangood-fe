@@ -89,6 +89,9 @@ export default {};
         padding: 2.4rem;
         border: 0.15rem solid #dbdbdb;
         border-radius: 3.2rem;
+        .member__image {
+          margin-bottom: 2.1rem;
+        }
         .member__name {
           margin-bottom: 0.5rem;
           @include textConfig(2.2rem, 3.5rem, #1b1d1a, 700);

@@ -131,6 +131,7 @@ export default {};
       .icon {
         margin-left: 2rem;
       }
+      margin-bottom: 2.4rem;
     }
     &__preview {
       display: flex;

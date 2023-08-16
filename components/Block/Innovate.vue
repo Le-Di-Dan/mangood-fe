@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="block" id="why-mangood">
     <div class="innovate">
       <div class="innovate__archives">
         <h2 class="heading">We Strive to Innovate</h2>

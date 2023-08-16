@@ -44,7 +44,7 @@ export default {};
     justify-content: space-between;
     align-items: center;
     &__message {
-      width: 67rem;
+      width: 66rem;
 
       &__heading {
         @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
@@ -65,6 +65,7 @@ export default {};
         list-style-position: outside;
         margin-left: 1.6rem;
         @include textConfig(1.6rem, 2.8rem, #656565, 400);
+        font-stretch: ultra-expanded;
       }
     }
   }

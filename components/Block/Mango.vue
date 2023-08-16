@@ -1,5 +1,5 @@
 <template>
-  <div class="block" id="mango">
+  <div class="block">
     <div class="slogan">
       <p class="slogan__text">
         FROM
@@ -27,7 +27,7 @@
       <div class="fruit__bg"></div>
       <img
         class="fruit__image"
-        src="~assets/common/images/png/mango.png"
+        src="~assets/common/images/png/golden_mango.png"
         alt="Mango"
         width="529"
         height="594"
@@ -82,10 +82,10 @@ export default {
     }
     &__image {
       position: absolute;
-      top: -3.2rem;
-      left: 10rem;
+      top: -1.8rem;
+      left: 4.5rem;
       z-index: 10;
-      transform: rotate(6deg);
+      transform: rotate(6deg) scale(1.25);
     }
   }
 }

@@ -54,6 +54,7 @@ export default {
       }
       .text {
         @include textConfig(1.8rem, 2.8rem, #8d8d8d, 400);
+        margin-top: 2.4rem;
       }
     }
     &__form {
