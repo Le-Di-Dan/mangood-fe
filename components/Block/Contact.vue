@@ -2,7 +2,10 @@
   <div class="block">
     <div class="contact" id="contact">
       <div class="contact__message">
-        <h2 class="heading">Got ideas? We’ve got the skills, Let’s team up.</h2>
+        <h2 class="heading">
+          Got ideas? We’ve got the skills, <br class="d__none--desktop" />
+          Let’s team up.
+        </h2>
         <p class="text">
           Tell us more about yourself and what you’re got in mind.
         </p>
@@ -66,6 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   .contact {
@@ -114,6 +118,34 @@ export default {
         padding: 1.6rem 7.4rem;
         border: none;
         border-radius: 90px;
+      }
+    }
+    @include query($tablet) {
+      grid-template-columns: 100%;
+      &__message {
+        .heading {
+          @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+        }
+        .text {
+          @include textConfig(1.4rem, 2.4rem, #8d8d8d, 400);
+          margin-top: 1.6rem;
+          margin-bottom: 2.4rem;
+        }
+      }
+      &__form {
+        padding: 0;
+        .input:not(textarea) {
+          padding: 1.2rem;
+          height: 4.8rem;
+          margin-bottom: 2.4rem;
+        }
+        textarea {
+          height: 12rem;
+        }
+        &__send {
+          width: 100%;
+          margin-top: 2.4rem;
+        }
       }
     }
   }

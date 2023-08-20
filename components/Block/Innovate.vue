@@ -33,7 +33,7 @@
       <img
         src="~assets/common/images/png/vens_chart.png"
         alt="Chart"
-        class="innovate_chart"
+        class="innovate_chart d__none--tablet"
       />
     </div>
   </div>
@@ -44,6 +44,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   .innovate {
@@ -55,15 +56,28 @@ export default {};
       .heading {
         @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
         margin-bottom: 2.4rem;
+        @include query($tablet) {
+          @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+          margin-bottom: 1rem;
+        }
       }
       .message {
         @include textConfig(1.8rem, 2.8rem, #8d8d8d, 400);
+        @include query($tablet) {
+          @include textConfig(1.4rem, 2.4rem, #656565, 400);
+        }
       }
       .archives__list {
         margin-top: 3.2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
+        @include query($tablet) {
+          margin-top: 2.4rem;
+          align-items: stretch;
+          justify-items: stretch;
+          gap: 2rem;
+        }
       }
       .archives__item {
         aspect-ratio: 27/22;
@@ -75,6 +89,16 @@ export default {};
         }
         .text {
           @include textConfig(1.6rem, 2.4rem, #8d8d8d, 500);
+        }
+        @include query($tablet) {
+          padding: 2rem;
+          .quantity {
+            @include textConfig(3.6rem, 4.8rem, #1b1d1a, 600);
+            margin-bottom: 1.2rem;
+          }
+          .text {
+            @include textConfig(1.4rem, 2.4rem, #8d8d8d, 500);
+          }
         }
       }
     }
