@@ -4,3 +4,14 @@
   color: $color;
   font-weight: $fWeight;
 }
+
+@mixin query($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
+@mixin minQuery($minWidth) {
+  @media screen and (min-width: $minWidth) {
+    @content;
+  }
+}

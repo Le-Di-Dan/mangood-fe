@@ -39,6 +39,6 @@ export default {
   build: {},
   target: "static",
   router: {
-    base: "/mangood-fe/",
+    // base: "/mangood-fe/",
   },
 };

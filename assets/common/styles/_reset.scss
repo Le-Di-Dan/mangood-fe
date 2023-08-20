@@ -14,11 +14,15 @@ html {
   min-height: 100vh;
   scroll-behavior: smooth;
   scroll-padding-top: 12rem;
+  overflow-x: hidden;
 }
 body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+}
+a {
+  color: #000000;
 }
 html,
 body,

@@ -1,3 +1,4 @@
+@import "./mixins";
 .py-0 {
   padding-top: 0;
   padding-bottom: 0;
@@ -9,4 +10,17 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.d__none {
+  &--desktop {
+    @include minQuery($tablet) {
+      display: none !important;
+    }
+  }
+  &--tablet {
+    @include query($tablet) {
+      display: none !important;
+    }
+  }
 }
