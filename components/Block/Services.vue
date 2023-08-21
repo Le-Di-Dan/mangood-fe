@@ -80,27 +80,50 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   .service {
     &__heading {
       @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
       margin-bottom: 2.4rem;
+      @include query($tablet) {
+        text-align: left;
+        @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+        margin-bottom: 1.6rem;
+      }
     }
     &__sub__heading {
       @include textConfig(1.8rem, 2.8rem, #8d8d8d, 400);
+      @include query($tablet) {
+        text-align: left;
+        @include textConfig(1.4rem, 2.4rem, #656565, 400);
+      }
     }
     &__list {
       margin-top: 4rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 2.4rem;
+      gap: 2.4rem;
+      @include query($tablet) {
+        margin-top: 1.6rem;
+        grid-template-columns: 100%;
+        gap: 1.6rem;
+      }
       .service__card {
         padding: 2.55rem 2.4rem;
         border: 0.15rem solid #dbdbdb;
         border-radius: 3.2rem;
+        @include query($tablet) {
+          padding: 1.6rem;
+          border-radius: 2rem;
+        }
         .image {
           margin-bottom: 2rem;
+          @include query($tablet) {
+            margin-bottom: 1.6rem;
+            width: 100%;
+          }
         }
         .field {
           @include textConfig(1.2rem, 1.6rem, rgba(#121a45, 0.5), 900);
@@ -109,6 +132,10 @@ export default {};
           @include textConfig(2.4rem, 3.2rem, #121a45, 700);
           margin-bottom: 1.2rem;
           margin-top: 0.8rem;
+          @include query($tablet) {
+            @include textConfig(2rem, 2.8rem, #121a45, 700);
+            margin-top: 0.4rem;
+          }
         }
         .descriptions {
           list-style: none;
@@ -118,6 +145,9 @@ export default {};
             @include textConfig(1.6rem, 3.2rem, #121a45, 500);
             display: inline-flex;
             position: relative;
+            @include query($tablet) {
+              @include textConfig(1.4rem, 2.4rem, #121a45, 500);
+            }
             &::before {
               content: "";
               background-image: url("~/assets/common/images/png/services/bullet_tick.png");

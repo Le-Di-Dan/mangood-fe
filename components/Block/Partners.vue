@@ -9,8 +9,6 @@
               src="~assets/common/images/png/partners/st_holding.png"
               alt="ST holding"
               class="partners__list__logo"
-              width="160"
-              height="64"
             />
           </a>
         </li>
@@ -79,6 +77,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   padding-top: 4rem;
@@ -87,17 +86,46 @@ export default {};
   border-bottom-width: 2px;
   border-style: solid;
   border-color: #e1e1e1;
+  @include query($tablet) {
+    border: none;
+  }
   .partners {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include query($tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    flex-direction: column;
     &__text {
       @include textConfig(2.4rem, 3.2rem, #1b1d1a, 600);
+      @include query($tablet) {
+        @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+        margin-bottom: 2.4rem;
+      }
     }
     &__list {
       display: inline-flex;
+      &__logo {
+        width: 16rem;
+        height: 6.4rem;
+        @include query($tablet) {
+          width: 15.8rem;
+        }
+      }
       &__item:not(:last-child) {
         margin-right: 2.4rem;
+        @include query($tablet) {
+          margin: 0;
+        }
+      }
+      @include query($tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.9rem 2rem;
       }
     }
   }

@@ -2,11 +2,14 @@
 .default_layout {
   .page_content {
     margin: 8.8rem 0 8.8rem 0;
+    @include query($tablet) {
+      margin: 5.2rem 0 5.2rem 0;
+    }
   }
 }
 .block {
   padding: 12rem 28rem;
   @include query($tablet) {
-    padding: 3.2rem 2.05rem;
+    padding: 3.2rem 2rem;
   }
 }

@@ -103,7 +103,7 @@ export default {
   left: 0;
   z-index: 999;
   @include query($tablet) {
-    padding: 0 4.8rem 0 4.8rem;
+    padding: 0 2rem 0 2rem;
     height: 5.2rem;
   }
 }
@@ -153,19 +153,21 @@ export default {
       position: fixed;
       top: 0;
       right: -100vw;
-      width: 100vw;
+      width: 200vw;
       height: 100vh;
       transition: 0.5s ease-in;
       opacity: 0;
+      visibility: hidden;
       background-color: rgba($color: #000000, $alpha: 0.4);
       &.active {
+        visibility: visible;
         right: 0;
-        transition: 0.5s ease-in;
+        transition: opacity right 0.5s ease-in;
         opacity: 1;
       }
       .menu {
         padding-right: 4.8rem;
-        width: 80%;
+        width: 80vw;
         background-color: #ffffff;
         position: absolute;
         top: 0;

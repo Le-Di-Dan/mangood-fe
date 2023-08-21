@@ -4,11 +4,12 @@
       <div class="themes__text">
         <h2 class="heading">Our Themes</h2>
         <p class="message">
-          Our user-centered design encourages productivity and <br />
+          Our user-centered design encourages <br class="d__none--desktop" />
+          productivity and <br class="d__none--tablet" />
           boosts revenue.
         </p>
       </div>
-      <div class="themes__check pointer">
+      <div class="themes__check pointer d__none--tablet">
         <span class="text">Check Full Themes</span>
         <img
           class="icon"
@@ -106,6 +107,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   .themes {
@@ -114,9 +116,17 @@ export default {};
       .heading {
         margin-bottom: 2.4rem;
         @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
+        @include query($tablet) {
+          @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+          margin-bottom: 1.6rem;
+        }
       }
       .message {
         @include textConfig(1.8rem, 2.8rem, #8d8d8d, 400);
+        @include query($tablet) {
+          @include textConfig(1.4rem, 2.4rem, #656565, 400);
+          margin-bottom: 1.6rem;
+        }
       }
     }
     &__check {
