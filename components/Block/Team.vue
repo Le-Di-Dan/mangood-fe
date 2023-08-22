@@ -11,7 +11,10 @@
           />
           <h3 class="member__name text-center">Dee8</h3>
           <h4 class="member__position text-center">
-            UX/UI DESIGNER &bull; co-founder
+            UX/UI DESIGNER
+            <span class="d__none--tablet">&bull;</span>
+            <br class="d__none--desktop" />
+            co-founder
           </h4>
         </div>
         <div class="team__members__item">
@@ -22,7 +25,10 @@
           />
           <h3 class="member__name text-center">Nyan</h3>
           <h4 class="member__position text-center">
-            UX/UI DESIGNER &bull; co-founder
+            UX/UI DESIGNER
+            <span class="d__none--tablet">&bull;</span>
+            <br class="d__none--desktop" />
+            co-founder
           </h4>
         </div>
         <div class="team__members__item">
@@ -33,7 +39,10 @@
           />
           <h3 class="member__name text-center">Tom</h3>
           <h4 class="member__position text-center">
-            UX/UI DESIGNER &bull; co-founder
+            UX/UI DESIGNER
+            <span class="d__none--tablet">&bull;</span>
+            <br class="d__none--desktop" />
+            co-founder
           </h4>
         </div>
         <div class="team__members__item">
@@ -73,6 +82,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   background-color: #f9f9f9;
@@ -80,6 +90,10 @@ export default {};
     &__heading {
       @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
       margin-bottom: 4rem;
+      @include query($tablet) {
+        @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+        margin-bottom: 1.6rem;
+      }
     }
     &__members {
       display: grid;
@@ -89,6 +103,9 @@ export default {};
         padding: 2.4rem;
         border: 0.15rem solid #dbdbdb;
         border-radius: 3.2rem;
+        .member__image {
+          margin-bottom: 2.1rem;
+        }
         .member__name {
           margin-bottom: 0.5rem;
           @include textConfig(2.2rem, 3.5rem, #1b1d1a, 700);
@@ -96,6 +113,25 @@ export default {};
         .member__position {
           @include textConfig(1.2rem, 1.6rem, rgba(#1b1d1a, 0.5), 900);
           text-transform: uppercase;
+        }
+      }
+      @include query($tablet) {
+        grid-template-columns: repeat(3, 19rem);
+        gap: 1.6rem;
+        overflow-x: scroll;
+        &__item {
+          padding: 1.05rem;
+          border-radius: 1.3rem;
+          .member {
+            &__image {
+              width: 100%;
+              margin-bottom: 1.05rem;
+            }
+            &__name {
+              @include textConfig(1.8rem, 2.8rem, #1b1d1a, 700);
+              margin-bottom: 0.4rem;
+            }
+          }
         }
       }
     }

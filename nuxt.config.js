@@ -27,12 +27,18 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios"],
+
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL,
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   target: "static",
   router: {
-    base: "/mangood-fe/"
-  }
+    base: "/mangood-fe/",
+  },
 };

@@ -56,6 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .footer {
   width: 100%;
@@ -95,6 +96,18 @@ export default {
           margin-right: 1.6rem;
         }
       }
+    }
+  }
+  @include query($tablet) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 3.2rem 2rem;
+    height: fit-content;
+    gap: 2rem;
+    &__contacts {
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 }

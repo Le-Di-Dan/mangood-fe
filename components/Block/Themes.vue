@@ -4,11 +4,12 @@
       <div class="themes__text">
         <h2 class="heading">Our Themes</h2>
         <p class="message">
-          Our user-centered design encourages productivity and <br />
+          Our user-centered design encourages <br class="d__none--desktop" />
+          productivity and <br class="d__none--tablet" />
           boosts revenue.
         </p>
       </div>
-      <div class="themes__check pointer">
+      <div class="themes__check pointer d__none--tablet">
         <span class="text">Check Full Themes</span>
         <img
           class="icon"
@@ -34,7 +35,7 @@
               </h3>
               <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
             </div>
-            <div class="action">
+            <div class="action d__none--tablet">
               <a href="#" class="action__link">
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
@@ -59,7 +60,7 @@
               <h3 class="info__title">Design of the Note Taking</h3>
               <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
             </div>
-            <div class="action">
+            <div class="action d__none--tablet">
               <a href="#" class="action__link">
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
@@ -86,7 +87,7 @@
               </h3>
               <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
             </div>
-            <div class="action">
+            <div class="action d__none--tablet">
               <a href="#" class="action__link">
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
@@ -97,6 +98,14 @@
           </div>
         </div>
       </div>
+      <div class="themes__check pointer d__none--desktop w-full">
+        <span class="text">Check Full Themes</span>
+        <img
+          class="icon"
+          src="~assets/common/images/png/arrow-right.png"
+          alt="Arrow right"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -106,6 +115,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
   .themes {
@@ -114,9 +124,17 @@ export default {};
       .heading {
         margin-bottom: 2.4rem;
         @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
+        @include query($tablet) {
+          @include textConfig(3.6rem, 4.8rem, #1b1d1a, 700);
+          margin-bottom: 1.6rem;
+        }
       }
       .message {
         @include textConfig(1.8rem, 2.8rem, #8d8d8d, 400);
+        @include query($tablet) {
+          @include textConfig(1.4rem, 2.4rem, #656565, 400);
+          margin-bottom: 1.6rem;
+        }
       }
     }
     &__check {
@@ -131,12 +149,23 @@ export default {};
       .icon {
         margin-left: 2rem;
       }
+      margin-bottom: 2.4rem;
+      @include query($tablet) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     &__preview {
       display: flex;
       justify-content: left;
       flex-wrap: wrap;
       gap: 2.4rem;
+      @include query($tablet) {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 1.6rem;
+      }
       &__item {
         width: fit-content;
         position: relative;
@@ -192,6 +221,42 @@ export default {};
               width: 100%;
               height: 100%;
               place-items: center;
+            }
+          }
+        }
+        @include query($tablet) {
+          width: 100%;
+          overflow: hidden;
+          .theme__image {
+            width: 100%;
+          }
+          .theme__detail {
+            position: relative;
+            width: 100%;
+            margin: 1.2rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: left;
+            .brief {
+              width: 100%;
+              display: flex;
+              gap: 0.8rem;
+              p {
+                width: 10.2rem;
+                @include textConfig(1rem, 1.4rem, #ffffff, 500);
+                height: 100%;
+              }
+            }
+            .info {
+              width: 100%;
+              &__title {
+                @include textConfig(1.4rem, 2rem, #1b1d1a, 700);
+                margin-bottom: 0.4rem;
+              }
+              &__text {
+                @include textConfig(1.2rem, 1.6rem, #8d8d8d, 400);
+              }
             }
           }
         }
