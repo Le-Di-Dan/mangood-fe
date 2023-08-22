@@ -4,6 +4,7 @@
       <h2 class="service__heading text-center">Our Services</h2>
       <p class="service__sub__heading text-center">
         As a tight-knit team of experts, we create memorable and emotional
+        <br class="d__none--tablet" />
         websites, digital experiences, and native apps.
       </p>
       <div class="service__list">
@@ -83,6 +84,10 @@ export default {};
 @import "~/assets/common/styles/_variables";
 @import "~/assets/common/styles/_mixins";
 .block {
+  background-color: #f9f9f9;
+  @include query($tablet) {
+    background-color: #ffffff;
+  }
   .service {
     &__heading {
       @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
@@ -114,6 +119,7 @@ export default {};
         padding: 2.55rem 2.4rem;
         border: 0.15rem solid #dbdbdb;
         border-radius: 3.2rem;
+        background-color: #ffffff;
         @include query($tablet) {
           padding: 1.6rem;
           border-radius: 2rem;

@@ -52,7 +52,9 @@
             alt=""
           />
           <h3 class="member__name text-center">Kuany</h3>
-          <h4 class="member__position text-center">Front-end Developers</h4>
+          <h4 class="member__position text-center">
+            Front-end Dev <span class="d__none--tablet">elopers</span>
+          </h4>
         </div>
         <div class="team__members__item">
           <img
@@ -61,7 +63,9 @@
             alt=""
           />
           <h3 class="member__name text-center">Woaky</h3>
-          <h4 class="member__position text-center">BACK-end Developer</h4>
+          <h4 class="member__position text-center">
+            BACK-end Dev<span class="d__none--tablet">eloper></span>
+          </h4>
         </div>
         <div class="team__members__item">
           <img
@@ -86,6 +90,9 @@ export default {};
 @import "~/assets/common/styles/_mixins";
 .block {
   background-color: #f9f9f9;
+  @include query($tablet) {
+    background-color: #ffffff;
+  }
   .team {
     &__heading {
       @include textConfig(4.8rem, 6.4rem, #1b1d1a, 700);
@@ -113,6 +120,10 @@ export default {};
         .member__position {
           @include textConfig(1.2rem, 1.6rem, rgba(#1b1d1a, 0.5), 900);
           text-transform: uppercase;
+          @include query($tablet) {
+            @include textConfig(1.2rem, 1.6rem, rgba(#1b1d1a, 0.5), 700);
+            letter-spacing: 0.2rem;
+          }
         }
       }
       @include query($tablet) {

@@ -92,6 +92,7 @@ export default {};
         }
         @include query($tablet) {
           padding: 2rem;
+          border-radius: 2rem;
           .quantity {
             @include textConfig(3.6rem, 4.8rem, #1b1d1a, 600);
             margin-bottom: 1.2rem;

@@ -48,6 +48,9 @@ export default {};
 @import "~/assets/common/styles/_mixins";
 .block {
   background-color: #f9f9f9;
+  @include query($tablet) {
+    background-color: #ffffff;
+  }
   .ideas {
     display: flex;
     justify-content: space-between;

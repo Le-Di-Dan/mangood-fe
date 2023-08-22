@@ -7,7 +7,8 @@
           Let’s team up.
         </h2>
         <p class="text">
-          Tell us more about yourself and what you’re got in mind.
+          Tell us more about yourself and what <br class="d__none--desktop" />
+          you’re got in mind.
         </p>
       </div>
       <form class="contact__form" action="#" @submit.prevent>

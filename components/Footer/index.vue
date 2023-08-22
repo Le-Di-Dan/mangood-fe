@@ -66,6 +66,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: #f9f9f9;
+
   &__rights {
     &__text {
       @include textConfig(1.6rem, 1.92rem, #363636, 400);

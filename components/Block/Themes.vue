@@ -33,7 +33,7 @@
               <h3 class="info__title">
                 Design of the Note Taking Interactive GUI for Docket Note
               </h3>
-              <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
+              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
             </div>
             <div class="action d__none--tablet">
               <a href="#" class="action__link">
@@ -58,7 +58,7 @@
             </div>
             <div class="info">
               <h3 class="info__title">Design of the Note Taking</h3>
-              <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
+              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
             </div>
             <div class="action d__none--tablet">
               <a href="#" class="action__link">
@@ -85,7 +85,7 @@
               <h3 class="info__title">
                 Design of the Note Taking Interactive GUI for Docket Note
               </h3>
-              <p class="info__text">Jul 17,2023 &bull;Ful-cycle</p>
+              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
             </div>
             <div class="action d__none--tablet">
               <a href="#" class="action__link">
@@ -185,6 +185,9 @@ export default {};
           justify-content: space-between;
           align-items: center;
           gap: 1.6rem;
+          @include query($tablet) {
+            box-shadow: none;
+          }
           .brief {
             width: 12rem;
             &__field {
