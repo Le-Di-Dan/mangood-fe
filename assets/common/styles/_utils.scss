@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 .d__none {
   &--desktop {
     @include minQuery($tablet) {
