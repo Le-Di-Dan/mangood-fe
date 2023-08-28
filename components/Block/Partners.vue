@@ -97,7 +97,6 @@ export default {};
       flex-direction: column;
       align-items: flex-start;
     }
-    flex-direction: column;
     &__text {
       @include textConfig(2.4rem, 3.2rem, #1b1d1a, 600);
       @include query($tablet) {

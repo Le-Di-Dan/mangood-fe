@@ -30,9 +30,9 @@
           </div>
         </div>
       </div>
-      <div class="innovate__chart">
+      <div class="innovate__chart d__none--tablet">
         <div class="innovate__chart-shape circle"></div>
-        <div class="innovate__chart-shape circle">
+        <div class="innovate__chart-shape hover circle">
           <div class="annotation annotation--p3 annotation--main">
             <span class="annotation__content">Growth</span>
           </div>
@@ -48,7 +48,7 @@
             <span class="annotation__content">A/B Testing</span>
           </div>
         </div>
-        <div class="innovate__chart-shape circle">
+        <div class="innovate__chart-shape hover circle">
           <div class="annotation annotation--p3 annotation--main">
             <span class="annotation__content">Insights</span>
           </div>
@@ -62,7 +62,7 @@
             <span class="annotation__content">Visual Design</span>
           </div>
         </div>
-        <div class="innovate__chart-shape circle">
+        <div class="innovate__chart-shape hover circle">
           <div class="annotation annotation--p1 annotation--main">
             <span class="annotation__content">Product</span>
           </div>
@@ -183,12 +183,14 @@ export default {};
           background-color: #f4f4f4;
           transform: translateX(-50%);
         }
-        &:hover {
-          border: 1px solid #929292;
-          transition: 0.5s linear;
-          .annotation {
-            opacity: 1 !important;
+        &.hover {
+          &:hover {
+            border: 1px solid #929292;
             transition: 0.5s linear;
+            .annotation {
+              opacity: 1 !important;
+              transition: 0.5s linear;
+            }
           }
         }
         .annotation {
