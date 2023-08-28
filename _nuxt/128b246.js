@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{379:function(t,n,e){"use strict";e.r(n);var l={name:"NuxtTutorial"},o=e(26),component=Object(o.a)(l,(function(){return(0,this._self._c)("div",{staticStyle:{"font-size":"36px"}},[this._v("aaa")])}),[],!1,null,null,null);n.default=component.exports}}]);
