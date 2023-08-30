@@ -10,7 +10,6 @@ const transporter = nodeMailer.createTransport({
   secure: true,
   service: "gmail",
   auth: {
-    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
     user: process.env.MAIL_SUPPORT_NAME,
     pass: process.env.MAIL_SUPPORT_PASSWORD,
   },
@@ -33,7 +32,7 @@ app.post("/api/support-mail", (req, res) => {
   transporter.sendMail(
     {
       ...mailOptions,
-      to: "didanle74@gmail.com",
+      to: process.env.MAIL_ADMIN,
       subject: "Mangood report mail.",
       html: `<h1>Người dùng ${client_name} đã gửi nội dung '${content} from ${client_email}'.</h1>`,
     },
@@ -55,7 +54,7 @@ app.post("/api/support-mail", (req, res) => {
     },
     (err) => {
       if (!err) {
-        console.log("Mail sent to admin");
+        console.log("Mail sent to client");
         res.send("Successful");
       }
       console.log(err);
@@ -63,7 +62,5 @@ app.post("/api/support-mail", (req, res) => {
     }
   );
 });
-// const port = process.env.BE_PORT || 5000;
-// app.listen(port, () => console.log(`start server on port ${port}`));
 
 module.exports = app;
