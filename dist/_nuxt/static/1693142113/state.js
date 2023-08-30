@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fmangood-fe\u002F_nuxt\u002Fstatic\u002F1693142113",layout:"default",error:a,serverRendered:true,routePath:"\u002F",config:{axios:{baseURL:"http:\u002F\u002Flocalhost:5050\u002Fapi"},_app:{basePath:"\u002Fmangood-fe\u002F",assetsPath:"\u002Fmangood-fe\u002F_nuxt\u002F",cdnURL:a}}}}(null));
