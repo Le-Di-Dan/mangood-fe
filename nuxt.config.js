@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "mangood-fe",
+    title: "Mangood",
     htmlAttrs: {
       lang: "en",
     },
@@ -11,7 +11,7 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/images/favicon.ico?" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -37,10 +37,7 @@ export default {
 
   axios: {
     retry: {
-      retries: 5,
+      retries: 3,
     },
   },
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  // build: {},
-  // router: {},
 };
