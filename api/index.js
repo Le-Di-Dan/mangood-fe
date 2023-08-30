@@ -63,5 +63,7 @@ app.post("/api/support-mail", (req, res) => {
     }
   );
 });
-const port = process.env.BE_PORT || 5000;
-app.listen(port, () => console.log(`start server on port ${port}`));
+// const port = process.env.BE_PORT || 5000;
+// app.listen(port, () => console.log(`start server on port ${port}`));
+
+module.exports = app;
