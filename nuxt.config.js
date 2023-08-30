@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  ssr: false,
   head: {
     title: "mangood-fe",
     htmlAttrs: {
@@ -43,7 +44,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  target: "static",
   router: {
     base: "/mangood-fe/",
   },
