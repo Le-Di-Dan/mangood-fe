@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__logo">
       <img
-        src="~assets/common/images/logo/mangood_logo.png"
+        src="~/assets/common/images/logo/mangood_logo.png"
         alt="mangood_logo"
         class="header__logo__icon"
       />
@@ -32,7 +32,7 @@
     </div>
     <img
       class="d__none--desktop"
-      src="~assets/common/images/png/button_menu.png"
+      src="~/assets/common/images/png/button_menu.png"
       alt="Menu"
       @click="isShowMenu = true"
     />
@@ -43,7 +43,7 @@
       <div class="menu">
         <div class="closer">
           <img
-            src="~assets/common/images/png/icon_close.png"
+            src="~/assets/common/images/png/icon_close.png"
             alt="Icon close"
             width="24"
             height="24"
