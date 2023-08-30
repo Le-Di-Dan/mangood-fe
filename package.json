@@ -9,7 +9,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "start-be": "node ./api"
+    "start-be": "node ./api",
+    "vercel-build": "echo build node"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
