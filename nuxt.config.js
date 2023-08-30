@@ -1,6 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
   head: {
     title: "mangood-fe",
     htmlAttrs: {
@@ -25,7 +24,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  // buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/axios"],
@@ -41,10 +40,7 @@ export default {
       retries: 5,
     },
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-  router: {
-    base: "/mangood-fe/",
-  },
+  // build: {},
+  // router: {},
 };
