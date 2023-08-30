@@ -35,6 +35,12 @@ export default {
     },
   },
 
+  axios: {
+    retry: {
+      retries: 5,
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   target: "static",

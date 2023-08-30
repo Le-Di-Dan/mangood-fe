@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://Le-Di-Dan.github.io/mangood-fe/",
   "scripts": {
-    "dev": "nuxt --open --hostname=192.168.1.8 --port=3000",
-    "build": "nuxt build",
+    "dev": "nuxt --open --hostname=10.0.7.165 --port=3000",
+    "build": "nuxt generate && nuxt start",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
