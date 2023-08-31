@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
 const nodeMailer = require("nodemailer");
+const { client, admin, render } = require("./template");
 
 const transporter = nodeMailer.createTransport({
   host: "smtp.forwardemail.net",
@@ -50,7 +51,7 @@ app.post("/api/support-mail", (req, res) => {
       ...mailOptions,
       to: client_email,
       subject: `Xin chào ${client_name}`,
-      html: `"<h1>Xin chào ${client_name}, đây là mail được gửi từ mangood.</h1>"`,
+      html: render(client, { "{{user}}": client_name }),
     },
     (err) => {
       if (!err) {
