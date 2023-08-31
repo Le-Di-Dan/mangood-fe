@@ -35,7 +35,11 @@ app.post("/api/support-mail", (req, res) => {
       ...mailOptions,
       to: process.env.MAIL_ADMIN,
       subject: "Mangood report mail.",
-      html: `<h1>Người dùng ${client_name} đã gửi nội dung '${content} from ${client_email}'.</h1>`,
+      html: render(admin, {
+        "{{user}}": client_name,
+        "{{content}}": content,
+        "{{user_email}}": client_email,
+      }),
     },
     (err) => {
       if (!err) {
@@ -50,7 +54,7 @@ app.post("/api/support-mail", (req, res) => {
     {
       ...mailOptions,
       to: client_email,
-      subject: `Xin chào ${client_name}`,
+      subject: `Hi ${client_name}`,
       html: render(client, { "{{user}}": client_name }),
     },
     (err) => {
@@ -63,5 +67,7 @@ app.post("/api/support-mail", (req, res) => {
     }
   );
 });
+
+app.listen(5555, () => console.log("on port 5555"));
 
 module.exports = app;
