@@ -1208,6 +1208,8 @@ const client = `<!DOCTYPE html>
                                           background-color: #ee9420;
                                           border-radius: 50%;
                                           line-height: 1;
+                                          width: 32px;
+                                          height: 32px;
                                         "
                                       >
                                         <img
@@ -1225,6 +1227,8 @@ const client = `<!DOCTYPE html>
                                           background-color: #ee9420;
                                           border-radius: 50%;
                                           line-height: 1;
+                                          width: 32px;
+                                          height: 32px;
                                         "
                                       >
                                         <img
@@ -2082,6 +2086,8 @@ const admin = `<!DOCTYPE html>
                                           background-color: #ee9420;
                                           border-radius: 50%;
                                           line-height: 1;
+                                          width: 32px;
+                                          height: 32px;
                                         "
                                       >
                                         <img
@@ -2099,6 +2105,8 @@ const admin = `<!DOCTYPE html>
                                           background-color: #ee9420;
                                           border-radius: 50%;
                                           line-height: 1;
+                                          width: 32px;
+                                          height: 32px;
                                         "
                                       >
                                         <img

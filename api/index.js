@@ -68,6 +68,9 @@ app.post("/api/support-mail", (req, res) => {
   );
 });
 
-app.listen(5555, () => console.log("on port 5555"));
+if (process.env.ENVIRONMENT === "develop") {
+  const PORT = process.env.BE_PORT || 5555;
+  app.listen(PORT, () => console.log(`Start Server On Port ${PORT}`));
+}
 
 module.exports = app;
