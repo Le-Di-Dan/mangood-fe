@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
 const nodeMailer = require("nodemailer");
+const { client, admin, render } = require("./template");
 
 const transporter = nodeMailer.createTransport({
   host: "smtp.forwardemail.net",
@@ -34,7 +35,11 @@ app.post("/api/support-mail", (req, res) => {
       ...mailOptions,
       to: process.env.MAIL_ADMIN,
       subject: "Mangood report mail.",
-      html: `<h1>Người dùng ${client_name} đã gửi nội dung '${content} from ${client_email}'.</h1>`,
+      html: render(admin, {
+        "{{user}}": client_name,
+        "{{content}}": content,
+        "{{user_email}}": client_email,
+      }),
     },
     (err) => {
       if (!err) {
@@ -49,8 +54,8 @@ app.post("/api/support-mail", (req, res) => {
     {
       ...mailOptions,
       to: client_email,
-      subject: `Xin chào ${client_name}`,
-      html: `"<h1>Xin chào ${client_name}, đây là mail được gửi từ mangood.</h1>"`,
+      subject: `Hi ${client_name}`,
+      html: render(client, { "{{user}}": client_name }),
     },
     (err) => {
       if (!err) {
@@ -62,5 +67,7 @@ app.post("/api/support-mail", (req, res) => {
     }
   );
 });
+
+app.listen(5555, () => console.log("on port 5555"));
 
 module.exports = app;
