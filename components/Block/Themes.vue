@@ -26,17 +26,19 @@
           />
           <div class="theme__detail">
             <div class="brief">
-              <p class="brief__field text-center">Web Application</p>
-              <p class="brief__level text-center">Full-cycle</p>
+              <p class="brief__field text-center">Website</p>
+              <p class="brief__level text-center">Ecommerce</p>
             </div>
             <div class="info">
-              <h3 class="info__title">
-                Design of the Note Taking Interactive GUI for Docket Note
-              </h3>
-              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
+              <h3 class="info__title">Jewelry Landing Page</h3>
+              <p class="info__text">Jul 17,2023 &bull; Free</p>
             </div>
             <div class="action d__none--tablet">
-              <a href="#" class="action__link">
+              <a
+                href="https://dribbble.com/shots/22588579-Jewelry-Hero-Section"
+                target="_blank"
+                class="action__link"
+              >
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
                   alt="Icon arrow up right"
@@ -53,15 +55,19 @@
           />
           <div class="theme__detail">
             <div class="brief">
-              <p class="brief__field text-center">Web Application</p>
-              <p class="brief__level text-center">Full-cycle</p>
+              <p class="brief__field text-center">Website</p>
+              <p class="brief__level text-center">Ecommerce</p>
             </div>
             <div class="info">
-              <h3 class="info__title">Design of the Note Taking</h3>
-              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
+              <h3 class="info__title">Sneaker Landing Page</h3>
+              <p class="info__text">Jul 17,2023 &bull; Free</p>
             </div>
             <div class="action d__none--tablet">
-              <a href="#" class="action__link">
+              <a
+                href="https://dribbble.com/shots/22523882-Sneaker-Hero-Section"
+                target="_blank"
+                class="action__link"
+              >
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
                   alt="Icon arrow up right"
@@ -78,17 +84,19 @@
           />
           <div class="theme__detail">
             <div class="brief">
-              <p class="brief__field text-center">Web Application</p>
-              <p class="brief__level text-center">Full-cycle</p>
+              <p class="brief__field text-center">App</p>
+              <p class="brief__level text-center">Blockchain</p>
             </div>
             <div class="info">
-              <h3 class="info__title">
-                Design of the Note Taking Interactive GUI for Docket Note
-              </h3>
-              <p class="info__text">Jul 17,2023 &bull; Ful-cycle</p>
+              <h3 class="info__title">NFT Marketplace App</h3>
+              <p class="info__text">Jul 17,2023 &bull; Free</p>
             </div>
             <div class="action d__none--tablet">
-              <a href="#" class="action__link">
+              <a
+                href="https://www.figma.com/community/file/1283284069790915621"
+                target="_blank"
+                class="action__link"
+              >
                 <img
                   src="~assets/common/images/png/icon_navigate.png"
                   alt="Icon arrow up right"
