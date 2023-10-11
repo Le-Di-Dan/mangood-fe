@@ -2,7 +2,7 @@
   <div class="block">
     <div class="ideas">
       <button class="ideas__message__button d__none--desktop w-full mt-6">
-        Contact us
+        <a href="#contact" style="font: inherit; color: inherit">Contact us</a>
       </button>
       <img
         src="~assets/common/images/png/team_metaverse.png"
@@ -32,7 +32,9 @@
           </li>
         </ul>
         <button class="ideas__message__button d__none--tablet">
-          Contact us
+          <a href="#contact" style="font: inherit; color: inherit"
+            >Contact us</a
+          >
         </button>
       </div>
     </div>

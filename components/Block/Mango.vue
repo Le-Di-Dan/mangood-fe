@@ -24,7 +24,9 @@
       <div class="slogan__action">
         <p class="slogan__action__text">Turn your idea into a tangible mango</p>
         <button class="slogan__action__button d__none--tablet">
-          CONTACT US
+          <a href="#contact" style="font: inherit; color: inherit"
+            >CONTACT US</a
+          >
         </button>
       </div>
     </div>
@@ -37,7 +39,7 @@
       />
     </div>
     <button class="slogan__action__button d__none--desktop w-full mt-6">
-      CONTACT US
+      <a href="#contact" style="font: inherit; color: inherit">CONTACT US</a>
     </button>
   </div>
 </template>
